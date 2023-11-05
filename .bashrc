@@ -138,9 +138,9 @@ export PATH=$BUN_INSTALL/bin:$PATH
 #     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 # }
 # # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-if [ -f ~/.git-prompt.sh ]; then
-    . ~/.git-prompt.sh
-fi
+# if [ -f ~/.git-prompt.sh ]; then
+#     . ~/.git-prompt.sh
+# fi
 
 # Syntactic sugar for ANSI escape sequences
 txtblk='\e[0;30m' # Black - Regular
@@ -187,8 +187,10 @@ PROMPT_AFTER="$ "
 PROMPT_COMMAND='__git_ps1 "$PROMPT_BEFORE" "$PROMPT_AFTER"'
 
 # Git prompt features (read ~/.git-prompt.sh for reference)
-export GIT_PS1_SHOWDIRTYSTATE="true"
-export GIT_PS1_SHOWSTASHSTATE="true"
-export GIT_PS1_SHOWUNTRACKEDFILES="true"
-export GIT_PS1_SHOWUPSTREAM="auto"
-export GIT_PS1_SHOWCOLORHINTS="true"
+# export GIT_PS1_SHOWDIRTYSTATE="true"
+# export GIT_PS1_SHOWSTASHSTATE="true"
+# export GIT_PS1_SHOWUNTRACKEDFILES="true"
+# export GIT_PS1_SHOWUPSTREAM="auto"
+# export GIT_PS1_SHOWCOLORHINTS="true"
+
+# just to show symlink functionalities
