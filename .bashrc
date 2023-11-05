@@ -126,21 +126,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-# bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
-#  eval "$(starship init bash)"
-
-# # Git branch in prompt.
-# parse_git_branch() {
-#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-# }
-# # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-# if [ -f ~/.git-prompt.sh ]; then
-#     . ~/.git-prompt.sh
-# fi
+if [ -f ~/.git-prompt.sh ]; then
+    . ~/.git-prompt.sh
+fi
 
 # Syntactic sugar for ANSI escape sequences
 txtblk='\e[0;30m' # Black - Regular
@@ -178,8 +169,8 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 # Prompt variables
-# PROMPT_BEFORE="$txtcyn\u@\h $txtwht\w$txtrst"
-PROMPT_BEFORE="$txtwht\w$txtrst"
+PROMPT_BEFORE="$txtcyn\u@\h: $txtwht\w$txtrst"
+# PROMPT_BEFORE="$txtwht\w$txtrst"
 # PROMPT_AFTER="\\n\\\$ "
 PROMPT_AFTER="$ "
 
@@ -187,10 +178,8 @@ PROMPT_AFTER="$ "
 PROMPT_COMMAND='__git_ps1 "$PROMPT_BEFORE" "$PROMPT_AFTER"'
 
 # Git prompt features (read ~/.git-prompt.sh for reference)
-# export GIT_PS1_SHOWDIRTYSTATE="true"
-# export GIT_PS1_SHOWSTASHSTATE="true"
-# export GIT_PS1_SHOWUNTRACKEDFILES="true"
-# export GIT_PS1_SHOWUPSTREAM="auto"
-# export GIT_PS1_SHOWCOLORHINTS="true"
-
-# just to show symlink functionalities
+export GIT_PS1_SHOWDIRTYSTATE="true"
+export GIT_PS1_SHOWSTASHSTATE="true"
+export GIT_PS1_SHOWUNTRACKEDFILES="true"
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_SHOWCOLORHINTS="true"
