@@ -1,0 +1,15 @@
+[user]
+	email = 120016906+gityahco@users.noreply.github.com
+	name = Yahya Mardini
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	co = checkout
+	aa = add .
+	cm = commit -m
+	pom = push origin main
+[init]
+	defaultBranch = main
