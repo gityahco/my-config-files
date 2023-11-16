@@ -10,6 +10,7 @@
 	co = checkout
 	aa = add .
 	cm = commit -m
+	ac = commit -am
 	pom = push origin main
 [init]
 	defaultBranch = main

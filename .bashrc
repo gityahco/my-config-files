@@ -129,6 +129,8 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
 if [ -f ~/.git-prompt.sh ]; then
     . ~/.git-prompt.sh
 fi
@@ -169,10 +171,10 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 # Prompt variables
-PROMPT_BEFORE="$txtcyn\u@\h: $txtwht\w$txtrst"
+PROMPT_BEFORE="$txtcyn\u@\h:$txtwht\w$txtrst"
 # PROMPT_BEFORE="$txtwht\w$txtrst"
-# PROMPT_AFTER="\\n\\\$ "
-PROMPT_AFTER="$ "
+PROMPT_AFTER="\\n\\\$ "
+# PROMPT_AFTER="$ "
 
 # Prompt command
 PROMPT_COMMAND='__git_ps1 "$PROMPT_BEFORE" "$PROMPT_AFTER"'
