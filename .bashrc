@@ -121,7 +121,8 @@ alias myupgrade="sudo apt update && sudo apt upgrade -y"
 alias mygeneratesshkey='ssh-keygen -t ed25519 -C "yahya18mardini@gmail.com"'
 alias shut="shutdown now"
 alias myping="ping google.com"
-
+alias pastess="wl-paste -t image/png > "$(date +%Y-%m-%d_%T).png""
+alias clpro="composer create-project laravel/laravel"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
